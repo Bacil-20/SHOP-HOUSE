@@ -32,17 +32,7 @@ $('.overlay').mousedown(function () {
 })
 
 // ************ navbar ************ //
-// $(".nav-item .nav-link").click(function (e) {
-//   e.preventDefault()
-// });
 
-
-// let one = document.querySelector(".one");
-// let two = document.querySelector(".two");
-
-
-
-if (window.screen.availWidth <= 1024) {
   $(".nav-item .dropdown-toggle").click(function (e) {
     console.log(this)
     $(this).next().slideToggle(500);
@@ -51,7 +41,7 @@ if (window.screen.availWidth <= 1024) {
     $(this).children().toggleClass("rotate");
     // $(this).off()
   });
-}
+
 // ************** Cart ************** //
 (function () {
   const cartBtn = document.querySelectorAll(".fa-shopping-cart");
