@@ -39,7 +39,6 @@ $('.overlay').mousedown(function () {
     $(".openslide").not($(this).next()).slideUp(500);
     $(this).parent().siblings().children().children().removeClass("rotate");
     $(this).children().toggleClass("rotate");
-    // $(this).off()
   });
 
 // ************** Cart ************** //
@@ -47,6 +46,7 @@ $('.overlay').mousedown(function () {
   const cartBtn = document.querySelectorAll(".fa-shopping-cart");
   cartBtn.forEach(function (btn) {
     btn.addEventListener("click", function (event) {
+      event.preventDefault();
       let fullPath =
         event.target.parentElement.parentElement.previousElementSibling.src;
       let pos = fullPath.indexOf("images");
